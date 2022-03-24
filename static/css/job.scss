@@ -1,39 +1,26 @@
 $main_color: #5eff94;
 
-.job__icon {
-    transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
+.job {
+    margin-top: 30px;
+}
 
-    width: 90px;
-    height: 50px;
-    background-color: $main_color;
-    position: relative;
+.job__container {
+    display: flex;
+    flex-direction: column;
+}
 
-    &:hover {
-        transform: scale(0.95);
-    }
+.job__title {
+    margin-bottom: 50px;
+    text-align: center;
 
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: $main_color;
-        top: 0;
-        left: 0;
-    }
+    font-size: 60px;
+}
 
-    &::before {
-        transform: rotate(60deg);
-    }
+.job__description {
+    font-size: 30px;
+    margin-bottom: 50px;
+}
 
-    &::after {
-        transform: rotate(-60deg);
-    }
-
-    &:target >  {
-        position: absolute;
-        top: 50px;
-    }
+.link_back {
+    margin: auto;
 }

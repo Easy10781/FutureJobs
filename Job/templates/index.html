@@ -3,7 +3,6 @@
 
 {% block links %}
 <link type="text/x-scss" rel="stylesheet" href="{% static "css/main.scss" %}">
-<link type="text/x-scss" rel="stylesheet" href="{% static "css/job.scss" %}">
 {% endblock %}
 
 {% block head %}
@@ -21,23 +20,17 @@
 </div>
 <div class="jobs">
     <div class="jobs__container">
-        <h1 class="jobs__title">Будет существовать 6 разных профессий</h1>
+        <h1 class="jobs__title">Существует 6 разных профессий</h1>
         <ul class="jobs__list">
-            {% comment %} <li class="list__item">
-                <div class="item__job">
-                    <a href="/psichoterapevt" class="job__link">Психотерапевт</a>
-                    <p class="job__title">Мир усложняются, в дело вступают новые угрозы. И обостряется проблемы, травмы и страх</p>
-                </div> 
-            </li> {% endcomment %}
             {% for job in jobs %}
-            <div class="item__job">
-                <a href="/{{ job.url }}" class="job__link">{{ job.name }}</a>
-                <p class="job__title">{{ job.short_desc }}</p>
-            </div> 
+            <li class="list__item">
+                <div class="item__job">
+                    <a href="/{{ job.url }}" class="job__link">{{ job.name }}</a>
+                    <p class="job__title">{{ job.short_desc }}</p>
+                </div>
+            </li>
             {% endfor %}
         </ul>
     </div>
 </div>
-<script src="{% static "js/animation.js" %}" onload="anim_about();"></script>
-<script src="{% static "js/setup.js" %}"></script>
 {% endblock %}

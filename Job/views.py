@@ -15,7 +15,8 @@ class Job:
     
     def short_desc(self):
         short = ''
-        for i in range(20): short += self.description[i]
+        for i in range(80): short += self.description[i]
+        short += '...'
         return short
 
 
@@ -94,5 +95,9 @@ def index(request):
 
 def job(request, job_name):
     return render(request, "job.html", {
-        "job": get_job(jobs_urls[job_name]),
+        "job": get_job(jobs_urls[job_name])
     })
+
+
+def about(request):
+    return render(request, "about.html")

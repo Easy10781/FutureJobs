@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}
+<link type="text/x-scss" rel="stylesheet" href="{% static "css/about.scss" %}">
+{% endblock %}
+
+{% block content %}
+<div class="aboutus">
+    <div class="aboutus__container">
+        <p class="info">Этот сайт был сделан 6 классниками, а именно Альбертом (дизайн) и Сашей (код).</p>
+
+        <div class="contacts">
+            <div class="sasha_contacts">
+                <p class="contacts__title">Контакты Саши</p>
+                <ul class="contact__list">
+                    <li class="contact__item">
+                        <a href='https://github.com/Easy10781'><img src="{% static "png/github.png" %}" alt="github" class="image"></a>
+                    </li>
+                    <li class="contact__item">
+                        <a href='https://vk.com/id659722662'><img src="{% static "png/vk.png" %}" alt="vk" class="image"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="albert_contacts">
+                <p>Контакты Альберта</p>
+                <p>Не дождался разрешения :/</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

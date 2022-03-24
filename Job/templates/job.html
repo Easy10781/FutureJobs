@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block links %}
+<link type="text/x-scss" rel="stylesheet" href="{% static "css/job.scss" %}">
+{% endblock %}
+
 {% block head %}
 <title>Профессии будущего - {{ job.name }}</title>
 {% endblock head %}
@@ -10,6 +14,8 @@
     <div class="job__container">
         <h1 class="job__title">{{ job.name }}</h1>
         <p class="job__description">{{ job.description }}</p>
+        
+        <a href="/" class="link_back">Назад к профессиям</a>
     </div>    
 </div>
 {% endblock content %}
