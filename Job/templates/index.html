@@ -23,12 +23,18 @@
     <div class="jobs__container">
         <h1 class="jobs__title">Будет существовать 6 разных профессий</h1>
         <ul class="jobs__list">
-            <li class="list__item">
+            {% comment %} <li class="list__item">
                 <div class="item__job">
-                    <a href="#" class="job__link">Психотерапевт</a>
+                    <a href="/psichoterapevt" class="job__link">Психотерапевт</a>
                     <p class="job__title">Мир усложняются, в дело вступают новые угрозы. И обостряется проблемы, травмы и страх</p>
                 </div> 
-            </li>
+            </li> {% endcomment %}
+            {% for job in jobs %}
+            <div class="item__job">
+                <a href="/{{ job.url }}" class="job__link">{{ job.name }}</a>
+                <p class="job__title">{{ job.short_desc }}</p>
+            </div> 
+            {% endfor %}
         </ul>
     </div>
 </div>

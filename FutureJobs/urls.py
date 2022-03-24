@@ -21,4 +21,5 @@ from Job.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
+    path('/psichoterapevt', (lambda request: job(request, "psichoterapevt")))
 ]

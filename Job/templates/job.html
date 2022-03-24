@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<title>Профессии будущего - {{ job.name }}</title>
+{% endblock head %}
+
+{% block content %}
+<div class="job">
+    <div class="job__container">
+        <h1 class="job__title">{{ job.name }}</h1>
+        <p class="job__description">{{ job.description }}</p>
+    </div>    
+</div>
+{% endblock content %}
