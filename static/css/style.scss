@@ -47,12 +47,6 @@ html {
     transition: all 1s ease;
 }
 
-@media (max-width: 544.97px) {
-    .menu__item {
-        font-size: 18px;
-    }
-}
-
 [class*="__container"] {
     max-width: 1094px;
     margin: 0px auto;
