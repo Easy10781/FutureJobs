@@ -1,0 +1,48 @@
+
+
+.header {
+    background-color: rgb(255, 255, 255);
+    height: 80px;
+
+    background-color: #acfcff;
+}
+
+.header__title {
+    color: black;
+
+    transition-duration: 0.2s;
+    transition-property: font-size;
+}
+
+.header__container {
+    display: flex;
+    min-height: 80px;
+    align-items: center;
+}
+
+.header__menu {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu__list {
+    display: flex;
+    gap: 20px;
+}
+
+.menu__item {
+    transition-duration: 0.2s;
+}
+
+.menu__link {
+    color: black;
+    transition-duration: 0.2s;
+
+    &:hover {
+        color: rgb(71, 71, 71);
+    }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {% load compress %}
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% compress css %}
+    <link type="text/x-scss" rel="stylesheet" href="{% static "css/style.scss" %}">
+    <link type="text/x-scss" rel="stylesheet" href="{% static "css/header.scss" %}">
+    <link type="text/x-scss" rel="stylesheet" href="{% static "css/footer.scss" %}">
+
+    {% block links %}{% endblock %}
+
+    {% endcompress %}
+
+    {% block head %}{% endblock head %}
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <a href="/" class="header__title">Профессии будущего</a>
+                <nav class="header__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="/about" class="menu__link">О нас</a></li>
+                        <li class="menu__item"><a href="/reg" class="menu__link">Регистрация</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="main">{% block content %}{% endblock content %}</main>
+    </div>
+</body>
+</html>
